@@ -8,7 +8,7 @@
 #
 # YOUR COMMENTS INCLUDING CITATIONS
 #
-# YOUR NAME - THE DATE
+# Samuel Saldivar - 10-24-2022
 #
 
 
@@ -29,7 +29,7 @@ def a_star_search(problem, h, repeat_check=False):
     if problem.is_goal(startNode):
         return startNode
     # add startNode to frontier,initializing a queue
-    queue = Frontier(startNode, True)
+    queue = Frontier(startNode, 'f')
     # reached set must contain startNode
     path = set()
     if repeat_check:
@@ -44,7 +44,7 @@ def a_star_search(problem, h, repeat_check=False):
             return popped
         # expand removedNode then iterate
 
-        for i in popped.expand(problem):
+        for i in popped.expand(problem,h):
             # add child to  frontier
             current = i.loc
 

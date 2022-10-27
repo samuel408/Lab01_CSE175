@@ -13,7 +13,7 @@
 
 from route import Node
 from route import Frontier
-from route import RoadMap
+from route import RouteProblem
 
 
 def uniform_cost_search(problem, repeat_check=False):
@@ -29,7 +29,7 @@ def uniform_cost_search(problem, repeat_check=False):
     if problem.is_goal(startNode):
         return startNode
     # add startNode to frontier,initializing a queue
-    queue = Frontier(startNode, True)
+    queue = Frontier(startNode, 'g')
     # reached set must contain startNode
     path = set()
     if repeat_check:

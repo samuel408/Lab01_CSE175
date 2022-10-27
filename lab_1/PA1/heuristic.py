@@ -28,11 +28,10 @@ class HeuristicFunction:
 
     def __init__(self, problem=None):
         self.problem = problem
-      #  self.distance = ((self.start).loc).euclidean_distance()
+        # PLACE ANY INITIALIZATION CODE HERE
         self.goal = problem.goal
         self.map = problem.map
 
-        # PLACE ANY INITIALIZATION CODE HERE
 
 
     def h_cost(self, loc=None):
