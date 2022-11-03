@@ -55,7 +55,7 @@ class HeuristicFunction:
             cost = 0
             for i in roads:#iterate through segments to get the costs
                     node = problem.result(current,i)
-                    cost = problem.action_cost(current, node)
+                    cost = cost + problem.action_cost(current, node)
                     current = node
 
 
